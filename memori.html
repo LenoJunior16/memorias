@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Memória Especial 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0; 
+      font-family: Arial, sans-serif; 
+      background: linear-gradient(120deg, #6ee7b7, #60a5fa); 
+      color: #fff; 
+      text-align: center;
+    }
+    .container { max-width: 800px; margin: auto; padding: 20px; }
+    h1 { font-size: 2.0rem; margin: 20px 0; }
+    .carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  text-align: center; /* centraliza imagens */
+}
+
+.carousel img {
+  width: 65%;       /* agora ocupa 80% do container */
+  display: none;    
+  margin: 0 auto;   /* centraliza horizontalmente */
+  border-radius: 20px; /* garante cantos arredondados da imagem */
+}
+    .carousel img.active { display: block; }
+    .message {
+      margin-top: 20px; 
+      background: rgba(0,0,0,0.3); 
+      padding: 15px; 
+      border-radius: 12px;
+      font-size: 1.0rem;
+    }
+    audio { margin-top: 20px; width: 100%; }
+    .footer { margin-top: 25px; font-size: 1.2rem; opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Para Sempre Nós Dois 💛</h1>
+
+    <!-- Carrossel de fotos -->
+    <div class="carousel">
+      <img src="foto1.jpg" class="active" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+      <img src="foto4.jpg" alt="Foto 3">
+      <img src="foto5.jpg" alt="Foto 3">
+      <img src="foto6.jpg" alt="Foto 3">
+      <img src="foto7.jpg" alt="Foto 3">
+      <img src="foto8.jpg" alt="Foto 3">
+    </div>
+
+    <!-- Mensagem -->
+    <div class="message">
+      Meu amor, cada momento ao seu lado é inesquecível.  
+      Essa memória é só um pedacinho do quanto você é especial pra mim.  
+      Te amoooo muitooo! 💖
+    </div>
+
+    <!-- Música -->
+    <audio controls autoplay loop>
+      <source src="musica.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+
+    <div class="footer">Feito com ❤️ especialmente para você</div>
+  </div>
+
+  <script>
+    // Carrossel automático
+    let slides = document.querySelectorAll('.carousel img');
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 3000);
+  </script>
+</body>
+</html>
